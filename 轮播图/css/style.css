@@ -26,6 +26,7 @@ body{
     height: 10px;
     border: 2px solid #fff;
     cursor: pointer;
+    margin: 6px;
     transition: 0.4s;
 }
 .bar:hover{
@@ -33,7 +34,7 @@ body{
 }
 input[name="r"]{
     position: absolute;
-    visibility: hidden;
+   display: none;
 }
 
 .slides{
