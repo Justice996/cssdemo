@@ -2,6 +2,26 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,rgb(181,154,254),rgb(245,189,253)) fixed;
+}
+
+.container{
+    position: relative;
+    width: 70rem;
+    height: 33rem;
+    background-color: #fff;
+}
+.container img{
+    width: 70%; 
+    height: 100%;
+    display: block;
+}
 .switch span{
   color: #ccc;
   font-size: 1.4rem;
@@ -9,4 +29,73 @@
 }
 .switch span.active{
   color: rgba(181, 154, 254);
+}
+
+.panel{
+    width: 30%;
+    margin: 4rem 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 12rem;
+    margin: 3rem 0 0;
+}
+
+form .input{
+  width: 100%;
+  position: relative;
+  margin: 2rem 0;
+  opacity: 1;
+  height: 2rem;
+  transition: .4s;
+}
+
+.input input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: .1rem solid rgb(181, 154, 254);
+}
+.input::after{
+    content: attr(placeholder);
+    position: absolute;
+    left: 0;
+    top: -20%;
+    font-size: 1.3rem;
+    color: rgba(129, 101, 207);
+    transition: .3s;
+}
+
+.input.focus::after{
+    top: -70%;
+    font-size: 1rem;
+}
+
+.login .input#email,
+.login .input#repeat{
+    margin: 0;
+    height: 0;
+    opacity: 0;
+}
+form span{
+    display: block;
+    color: rgba(110, 89, 167);
+    font-size: .8rem;
+}
+form button{
+    margin: 2rem 0 0;
+    width: 100%;
+    height: 3.5rem;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    background: linear-gradient(90deg,rgb(181,154,254),rgb(245,189,253) );
+    box-shadow: 0 0 8px rgb(181,154,254);
+    cursor: pointer;
+    color: white;
 }
