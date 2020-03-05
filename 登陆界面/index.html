@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个简洁的登录页面</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="http://img.netbian.com/file/2017/0106/ea37a8247f1141761fe6d64c4e671790.jpg" alt="">
+        <div class="panel">
+            <div class="content login">
+                <div class="switch">
+                    <span id="login" class="active">Login</span>
+                    <span>/</span>
+                    <span id="signup">Sign Up</span>
+                </div>
+                <form action="">
+                    <div id="email" class="input" placeholder="Email"><input type="text"></div>
+                    <div class="input" placeholder="Username"><input type="text"></div>
+                    <div class="input"  placeholder="Password"><input type="password"></div>
+                    <div id="repeat" class="input" placeholder="Repeat"><input type="password"></div>
+                    <span>Forget?</span>
+                    <button>Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+      $('#login').click(function(){
+          $('.switch span').removeClass('active');
+          $(this).addClass('active');
+          $(this).parents('.content').removeClass('singnup');
+          $(this).parents('.content').addClass('login');
+          $("form button").text('LOGIN');
+      });
+      $('#signup').click(function(){
+          $('.switch span').removeClass('active');
+          $(this).addClass('active');
+          $(this).parents('.content').removeClass('login');
+          $(this).parents('.content').addClass('singnup');
+          $("form button").text('SIGNUP');
+      });
+      $('.input input').on('focus',function(){
+        $(this).parent().addClass("focus");
+      });
+      $('.input input').on('blur',function(){
+          if($(this).val()===''){
+            $(this).parent().removeClass("focus");
+          }
+      });
+  </script>
+</body>
+</html>
