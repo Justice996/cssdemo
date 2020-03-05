@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个简洁的登录页面</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <div class="content">
+                <div class="switch">
+                    <span id="login" class="active">Login</span>
+                    <span>/</span>
+                    <span id="signup">Sign Up</span>
+                </div>
+                <form action="">
+                    <div class="input"><input type="text"></div>
+                    <div class="input"><input type="text"></div>
+                    <div class="input"><input type="text"></div>
+                    <div class="input"><input type="text"></div>
+                    <span>Forget?</span>
+                    <button>Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+      $('#login').click(function(){
+          $('.switch span').removeClass('active');
+          $(this).addClass('active');
+          $(this).parents('.content').removeClass('singnup');
+          $(this).parents('.content').addClass('login');
+
+      });
+      $('#signup').click(function(){
+          $('.switch span').removeClass('active');
+          $(this).addClass('active');
+          $(this).parents('.content').removeClass('login');
+          $(this).parents('.content').addClass('singnup');
+      });
+  </script>
+</body>
+</html>
