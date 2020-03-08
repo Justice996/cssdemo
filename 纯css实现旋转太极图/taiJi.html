@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>旋转的太极图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .circlebox {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+            animation: move 5s infinite linear;
+        }
+        .cblack{
+            width: 300px;
+            height: 300px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        .wbany{
+            width: 150px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 0 150px 150px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .ww{
+             width: 150px;
+             height: 150px;
+             border-radius: 50%;
+             background-color: #fff;
+             position: absolute;
+             top: 0;
+             left: 75px;
+        }
+        .bb{
+             width: 150px;
+             height: 150px;
+             border-radius: 50%;
+             background-color: #000;
+             position: absolute;
+             bottom: 0;
+             left: 75px;
+        }
+        .smallb{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            left: 140px;
+            top: 65px;
+            background-color: #000;
+        }
+        .smallw{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            left: 140px;
+            bottom: 65px;
+            background-color: #fff;
+        }
+        @keyframes move{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circlebox">
+
+        <!-- 先画一个黑色的大圆 -->
+        <!-- 在画一个白色的半圆（先画一个矩形，在去掉两个角） -->
+        <!-- 再画两个大圆,然后居中，一上一下，一白一黑 -->
+        <!-- 再画两个小圆 -->
+        <div class="cblack"></div>
+        <div class="wbany"></div>
+        <div class="ww"></div>
+        <div class="bb"></div>
+        <div class="smallb"></div>
+        <div class="smallw"></div>
+    </div>
+</body>
+
+</html>
