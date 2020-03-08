@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A3137;
+}
+.out-circle{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    border-radius: 50%;
+    animation: r 1.5s linear infinite;
+}
+.in-circle{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+@keyframes r{
+    /* 色相反转 */
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.out-circle span{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+  border-radius: 50%;
+}
+/* 模糊半径滤镜属性 */
+.out-circle span:nth-child(1){
+  filter: blur(5px);
+}
+
+.out-circle span:nth-child(2){
+    filter: blur(10px);
+  }
+
+  .out-circle span:nth-child(3){
+    filter: blur(25px);
+  }
+
+  .out-circle span:nth-child(4){
+    filter: blur(150px);
+  }
